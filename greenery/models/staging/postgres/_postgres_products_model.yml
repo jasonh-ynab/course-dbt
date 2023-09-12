@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: stg_products
+    description: Unique product list that includes name, price, and inventory. 
+    columns:
+      - name: product_id
+        tests:
+          - unique

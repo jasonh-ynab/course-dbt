@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: Unique order IDs. 
+    columns:
+      - name: order_id
+        tests:
+          - unique

@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: stg_order_items
+    description: Order-specific product IDs.
+###    columns:
