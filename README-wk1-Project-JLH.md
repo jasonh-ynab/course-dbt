@@ -24,7 +24,7 @@ SELECT
 FROM stg_orders
 where delivered_at is not null
 ;
-# How many users have only made one purchase? Two purchases? Three+ purchases?
+## How many users have only made one purchase? Two purchases? Three+ purchases?
 ####    -- Note: you should consider a purchase to be a single 
 ####        -- order. In other words, if a user places one order for 3 
 ####        -- products, they are considered to have made 1 purchase.
