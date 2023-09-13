@@ -1,7 +1,7 @@
 # Analytics engineering with dbt | Week 1 Project - Jason Lambeth Hill
 
 ## How many users do we have? 
-  ## --> 130 distinct users
+  ### --> 130 distinct users
 SELECT 
     count(distinct(user_id))
 FROM stg_users
@@ -18,17 +18,17 @@ FROM
     group by date_hourly_group)
 ;
 ## On average, how long does an order take from being placed to being delivered? 
-  ## --> ~93 hours, or 3-4 days
+  ### --> ~93 hours, or 3-4 days
 SELECT 
     avg(datediff(hour,created_at,delivered_at)) as fulfillment_time
 FROM stg_orders
 where delivered_at is not null
 ;
-## How many users have only made one purchase? Two purchases? Three+ purchases?
-#    -- Note: you should consider a purchase to be a single 
-#        -- order. In other words, if a user places one order for 3 
-#        -- products, they are considered to have made 1 purchase.
-  ## --> 25 users made one purchase, 28 users made two purchases, & 71 users made three or more purchases.
+# How many users have only made one purchase? Two purchases? Three+ purchases?
+####    -- Note: you should consider a purchase to be a single 
+####        -- order. In other words, if a user places one order for 3 
+####        -- products, they are considered to have made 1 purchase.
+  ### --> 25 users made one purchase, 28 users made two purchases, & 71 users made three or more purchases.
 SELECT
     CASE WHEN lifetime_orders = 1 then 'one'
         WHEN lifetime_orders = 2 then 'two'
@@ -46,7 +46,7 @@ order by total_users asc
 ;
 
 ## On average, how many unique sessions do we have per hour? 
-  ## --> 16.3 sessions per hour, on average
+  ### --> 16.3 sessions per hour, on average
 
 SELECT
     avg(sessions_per_hour)
