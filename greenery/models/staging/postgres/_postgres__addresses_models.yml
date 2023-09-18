@@ -1,9 +1,0 @@
-version: 2
-
-models:
-  - name: stg_addresses
-    description: Unique address IDs from platform across all addresses logged. 
-    columns:
-      - name: address_id
-        tests:
-          - unique

@@ -1,9 +1,0 @@
-version: 2
-
-models:
-  - name: stg_users
-    description: Unique User IDs. 
-    columns:
-      - name: user_id
-        tests:
-          - unique

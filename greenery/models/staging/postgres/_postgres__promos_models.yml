@@ -1,9 +1,0 @@
-version: 2
-
-models:
-  - name: stg_promos
-    description: Unique log of promo codes including their status and discount in dollars. 
-    columns:
-      - name: promo_id
-        tests:
-          - unique

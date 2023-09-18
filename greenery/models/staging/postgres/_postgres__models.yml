@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: stg_addresses
+    description: Unique address IDs from platform across all addresses logged. 
+    columns:
+      - name: address_id
+        tests:
+          - unique
+
+  - name: stg_events
+    description: Unique event IDs by user and page URL where the tracking event fired. 
+    columns:
+      - name: event_id
+        tests:
+          - unique
+
+  - name: stg_order_items
+    description: Order-specific product IDs.
+
+  - name: stg_orders
+    description: Unique order IDs. 
+    columns:
+      - name: order_id
+        tests:
+          - unique
+
+  - name: stg_products
+    description: Unique product list that includes name, price, and inventory. 
+    columns:
+      - name: product_id
+        tests:
+          - unique
+
+  - name: stg_promos
+    description: Unique log of promo codes including their status and discount in dollars. 
+    columns:
+      - name: promo_id
+        tests:
+          - unique
+
+  - name: stg_users
+    description: Unique User IDs. 
+    columns:
+      - name: user_id
+        tests:
+          - unique

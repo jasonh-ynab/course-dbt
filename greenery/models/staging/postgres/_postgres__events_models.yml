@@ -1,9 +1,0 @@
-version: 2
-
-models:
-  - name: stg_events
-    description: Unique event IDs by user and page URL where the tracking event fired. 
-    columns:
-      - name: event_id
-        tests:
-          - unique
