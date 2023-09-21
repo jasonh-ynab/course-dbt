@@ -18,7 +18,7 @@ from
 ```
 
 #### Question: 
-HYPOTHETICAL: What are good indicators of a user who will likely purchase again? What about indicators of users who are likely NOT to purchase again? If you had more data, what features would you want to look into to answer this question?#### Answer
+HYPOTHETICAL: What are good indicators of a user who will likely purchase again? What about indicators of users who are likely NOT to purchase again? If you had more data, what features would you want to look into to answer this question?
 #### Answer
 We have lots of pathways here. One short-term play is: we could look at the `events` table and see if there are users visiting the site or even adding to cart without having completed a recent purchase.
 
@@ -32,14 +32,16 @@ Beyond the data that we have, I would be interested in how a purchaser came to G
 
 There's more to dig into & dream about, but this feels like a very dense starting point!
 
-#### Task: 
-More stakeholders are coming to us for data, which is great! But we need to get some more models created before we can help. Create a marts folder, so we can organize our models, with the following subfolders for business units:
+#### Tasks: 
+-> More stakeholders are coming to us for data, which is great! But we need to get some more models created before we can help. Create a marts folder, so we can organize our models, with the following subfolders for business units:
+
 • Product -- required
+
 • Core -- optional
+
 • Marketing -- optional 
 
-#### Additional task:
-Within each marts folder, create intermediate models and dimension/fact models.
+-> Within each marts folder, create intermediate models and dimension/fact models.
 
 
 
