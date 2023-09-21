@@ -2,9 +2,9 @@
 
 #### Question: 
 What is our user repeat rate? 
-#### Answer
-80% - It's a small set of ~124 total purchasers.
-##### Code
+####    Answer
+    80% - It's a small set of ~124 total purchasers.
+
 ```
 select
     (count_if(order_number >= 2) / count(distinct user_id )) as Repeat_Rate
