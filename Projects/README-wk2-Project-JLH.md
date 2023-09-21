@@ -2,8 +2,8 @@
 
 #### Question: 
 What is our user repeat rate? 
-####    Answer
-    80% - It's a small set of ~124 total purchasers.
+####    Answer: 
+80% - It's a small set of ~124 total purchasers.
 
 ```
 select
