@@ -32,10 +32,6 @@ Beyond the data that we have, I would be interested in how a purchaser came to G
 
 There's more to dig into & dream about, but this feels like a very dense starting point!
 
-#### Code
-```
-;
-```
 #### Task: 
 More stakeholders are coming to us for data, which is great! But we need to get some more models created before we can help. Create a marts folder, so we can organize our models, with the following subfolders for business units:
 • Product -- required
