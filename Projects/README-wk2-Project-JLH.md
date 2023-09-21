@@ -36,9 +36,7 @@ There's more to dig into & dream about, but this feels like a very dense startin
 -> More stakeholders are coming to us for data, which is great! But we need to get some more models created before we can help. Create a marts folder, so we can organize our models, with the following subfolders for business units:
 
 • Product -- required
-
 • Core -- optional
-
 • Marketing -- optional 
 
 -> Within each marts folder, create intermediate models and dimension/fact models.
