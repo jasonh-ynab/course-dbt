@@ -9,7 +9,7 @@ renamed_recast as (
       session_id,
       user_id,
       page_url,
-      created_at,
+      created_at as event_created_at_utc,
       event_type,
       order_id,
       product_id
