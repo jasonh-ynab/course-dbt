@@ -23,7 +23,7 @@ final as (
 --      , events.session_id
 --      , events.user_id
 --      , case
---          when concat(events.session_id,events.product_id)
+--          when concat(events.session_id,events.product_id) 
 --            = concat(session_order_purchases.session_id,session_order_purchases.product_id) then 1
 --          else 0
 --        end as end_in_purchase
