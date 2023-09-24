@@ -53,6 +53,8 @@ Second, ```int_session_times``` simply takes the timestamps related to each sess
 In terms of organization, I decided to leave the intermediate folder outside of Product & keep it in marts because it feels as if these int tables could be repurposed for other teams (e.g. Marketing may like to leverage some of the events website data).
 
 [paste DAG]
+<img width="1855" alt="image" src="https://github.com/jasonh-ynab/course-dbt/assets/105445369/ef290468-f57d-423a-ada4-2f37396e0bea">
+
 
 ## Part 2 | Tests
 
