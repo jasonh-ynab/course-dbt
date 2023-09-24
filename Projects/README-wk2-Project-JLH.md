@@ -5,7 +5,7 @@
 #### Question: 
 What is our user repeat rate? 
 ####    Answer: 
-80% - It's a small set of ~124 total purchasers. I only had time to play with the SQL, but I'm interested in thinking about how I would surface this in a fact table...
+80% - It's a small set of ~124 total purchasers. I only had time to play with the SQL, but I'm interested in thinking about how I would expose this in a fact table...
 
 ```
 select
@@ -67,7 +67,7 @@ My favorite test that I added is the accepted values on order_status in the ```s
 #### Question
 Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests?
 #### Answer
-I did not find any bad data...
+I did not find any bad data... Frankly, I kept my tests simple because I spent many hours stuck on the ```fct_page_views``` work -- I could not get unstuck until I saw Oleg's walk through.
 
 #### Task
 Apply these changes to your github repo
@@ -75,7 +75,7 @@ Apply these changes to your github repo
 #### Question
 Your stakeholders at Greenery want to understand the state of the data each day. Explain how you would ensure these tests are passing regularly and how you would alert stakeholders about bad data getting through.
 #### Answer
-
+I cannot find this table? I think that I lost this week-ago snapshot data because I dropped my initial table that I named ```stg_products``` & now it is called ```stg_postgres___products```.
 
 ## License
 GPL-3.0
