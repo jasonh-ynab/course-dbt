@@ -24,7 +24,7 @@ final as (
       , sum (case when e.event_type = 'package_shipped' then 1 else 0 end) as packages_shipped
     from events e
       left join order_items oi
-      on oi.order_id = e.order_id
+      on e.order_id = oi.order_id
     group by 1,2,3
 )
 

@@ -1,8 +1,4 @@
-
--- UNFINISHED DRAFT 
-
-with
-session_times as (
+with session_times as (
     select * from {{ ref('int_session_times')}}
 ),
 
