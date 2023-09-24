@@ -1,9 +1,11 @@
 # Analytics engineering with dbt | Week 2 Project - Jason Lambeth Hill
 
+## Part 1 | Models
+
 #### Question: 
 What is our user repeat rate? 
 ####    Answer: 
-80% - It's a small set of ~124 total purchasers.
+80% - It's a small set of ~124 total purchasers. I only had time to play with the SQL, but I'm interested in thinking about how I would surface this in a fact table...
 
 ```
 select
@@ -41,7 +43,36 @@ There's more to dig into & dream about, but this feels like a very dense startin
 
 -> Within each marts folder, create intermediate models and dimension/fact models.
 
+#### Question & tasks: 
+Explain the product mart models you added. Why did you organize the models in the way you did? (Use the dbt docs to visualize your model DAGs to ensure the model layers make sense -- paste an imagine of your DAG)
+#### Answer
+For the Product Mart, I needed 2 intermediate tables to get me to the "final" ```fct_page_views``` table. I like how Jake H. talked about intermediate tables being a 'bit of code that you can re-use elsewhere.' So the 2 tables feel like they could 'plug in' in 2 very different ways.
+First, ```int_sessions``` fully transforms the ```stg_events``` table into a by session, by user, by page/product table that aggregates our trigger events. 
+Second, ```int_session_times``` simply takes the timestamps related to each session to give a bit more usable context (e.g. session length).
 
+In terms of organization, I decided to leave the intermediate folder outside of Product & keep it in marts because it feels as if these int tables could be repurposed for other teams (e.g. Marketing may like to leverage some of the events website data).
+
+[paste DAG]
+
+## Part 2 | Tests
+
+#### Question
+What assumptions are you making about each model? (i.e. why are you adding each test?)
+#### Answer
+Across the board, I put in a unique test for the "primary key" of each table. I also put a test for address_id to not be null in the ```stg_addresses``` table.
+My favorite test that I added is the accepted values on order_status in the ```stg_orders``` table.
+
+#### Question
+Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests?
+#### Answer
+I did not find any bad data...
+
+#### Task
+Apply these changes to your github repo
+
+#### Question
+Your stakeholders at Greenery want to understand the state of the data each day. Explain how you would ensure these tests are passing regularly and how you would alert stakeholders about bad data getting through.
+#### Answer
 
 
 ## License
