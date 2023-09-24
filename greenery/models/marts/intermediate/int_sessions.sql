@@ -9,18 +9,23 @@ events as (
     select * from {{ ref('stg_postgres__events')}}
 ),
 
+order_items as (
+    select * from {{ ref('stg_postgres__order_items')}}
+),
+
 final as (
     select
-        session_id
-        , user_id
-        , sum(case when event_type = 'add_to_cart' then 1 else 0 end) as add_to_carts
-        , sum(case when event_type = 'checkout' then 1 else 0 end) as checkouts
-        , sum(case when event_type = 'package_shipped' then 1 else 0 end) as package_shipped
-        , sum(case when event_type = 'page_view' then 1 else 0 end) as page_views
-        , min(event_created_at_utc) as first_session_event_at_utc
-        , max(event_created_at_utc) as last_session_event_at_utc
-    from events
-    group by 1,2
+      e.session_id
+      , e.user_id
+      , coalesce(e.product_id,oi.product_id) as product_id
+      , sum (case when e.event_type = 'page_view' then 1 else 0 end) as page_views
+      , sum (case when e.event_type = 'add_to_cart' then 1 else 0 end) as add_to_carts
+      , sum (case when e.event_type = 'checkout' then 1 else 0 end) as checkouts
+      , sum (case when e.event_type = 'package_shipped' then 1 else 0 end) as packages_shipped
+    from events e
+      left join order_items oi
+      on oi.order_id = e.order_id
+    group by 1,2,3
 )
 
 select * from final

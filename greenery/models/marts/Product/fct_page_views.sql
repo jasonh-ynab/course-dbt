@@ -2,8 +2,8 @@
 -- UNFINISHED DRAFT 
 
 with
-pageviews as (
-    select * from {{ ref('int_page_views')}}
+session_times as (
+    select * from {{ ref('int_session_times')}}
 ),
 
 sessions as (
@@ -12,27 +12,19 @@ sessions as (
 
 final as (
     select 
-        *
-    from pageviews
+        se.session_id
+        , se.user_id
+        , se.product_id
+        , se.page_views
+        , se.add_to_carts
+        , se.checkouts
+        , se.packages_shipped
+        , st.first_session_event_at_utc
+        , st.last_session_event_at_utc
+        , st.session_length_minutes
+    from sessions se
+    left join session_times st 
+        on se.session_id = st.session_id
 )
---
--- final as (
---    select
---      date(events.event_created_at_utc) as date
---      , events.product_id
---      , events.session_id
---      , events.user_id
---      , case
---          when concat(events.session_id,events.product_id) 
---            = concat(session_order_purchases.session_id,session_order_purchases.product_id) then 1
---          else 0
---        end as end_in_purchase
---    from events
---    left join
---      session_order_purchases on
---      events.session_id =
---      session_order_purchases.session_id
---    where event_type = 'checkout'
---)
---
+
 select * from final
