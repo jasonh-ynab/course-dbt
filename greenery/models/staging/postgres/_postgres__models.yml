@@ -1,45 +1,50 @@
 version: 2
 
 models:
-  - name: stg_addresses
+  - name: stg_postgres__addresses
     description: Unique address IDs from platform across all addresses logged. 
     columns:
       - name: address_id
         tests:
           - unique
+          - not_null
 
-  - name: stg_events
+  - name: stg_postgres__events
     description: Unique event IDs by user and page URL where the tracking event fired. 
     columns:
       - name: event_id
         tests:
           - unique
 
-  - name: stg_order_items
+  - name: stg_postgres__order_items
     description: Order-specific product IDs.
 
-  - name: stg_orders
+  - name: stg_postgres__orders
     description: Unique order IDs. 
     columns:
       - name: order_id
         tests:
           - unique
+      - name: order_status
+        tests:
+          - accepted_values:
+              values: ['delivered', 'shipped', 'preparing']
 
-  - name: stg_products
+  - name: stg_postgres__products
     description: Unique product list that includes name, price, and inventory. 
     columns:
       - name: product_id
         tests:
           - unique
 
-  - name: stg_promos
+  - name: stg_postgres__promos
     description: Unique log of promo codes including their status and discount in dollars. 
     columns:
       - name: promo_id
         tests:
           - unique
 
-  - name: stg_users
+  - name: stg_postgres__users
     description: Unique User IDs. 
     columns:
       - name: user_id
