@@ -1,4 +1,4 @@
-# Analytics engineering with dbt | Week 2 Project - Jason Lambeth Hill
+# Analytics engineering with dbt | Week 2 - Jason Lambeth Hill
 
 ## Part 1 | Models
 

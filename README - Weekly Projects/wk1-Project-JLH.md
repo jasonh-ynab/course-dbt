@@ -1,4 +1,4 @@
-# Analytics engineering with dbt | Week 1 Project - Jason Lambeth Hill
+# Analytics engineering with dbt | Week 1 - Jason Lambeth Hill
 
 ### How many users do we have? 
   #### --> 130 distinct users
