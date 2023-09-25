@@ -7,7 +7,7 @@ renamed_recast as (
     SELECT
       product_id,
       name as product_name,
-      price,
+      price as product_price,
       inventory
     from source
 )

@@ -6,11 +6,17 @@ sessions as (
     select * from {{ ref('int_sessions')}}
 ),
 
+products as (
+    select * from {{ ref('stg_postgres__products')}}
+),
+
 final as (
     select 
         se.session_id
         , se.user_id
         , se.product_id
+        , p.product_name
+        , p.product_price
         , se.page_views
         , se.add_to_carts
         , se.checkouts
@@ -21,6 +27,8 @@ final as (
     from sessions se
     left join session_times st 
         on se.session_id = st.session_id
+    left join products p
+        on se.product_id = p.product_id
 )
 
 select * from final
