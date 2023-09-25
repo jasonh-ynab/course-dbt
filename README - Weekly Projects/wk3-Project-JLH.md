@@ -1,7 +1,7 @@
 # Analytics engineering with dbt | Week 3 - Jason Lambeth Hill
 
 ## Part 1 | Create new models...
-
+-- built fct_product_conversions
 
 ## Part 2 | macros...
 
