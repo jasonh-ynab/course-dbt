@@ -1,5 +1,7 @@
 # Analytics engineering with dbt | Week 3 - Jason Lambeth Hill
 
+Here is a link to my Data Model folder structures: https://github.com/jasonh-ynab/course-dbt/tree/main/greenery/models/marts
+
 ## Part 1 | Create new models...
 I built ```fct_product_conversions```, which makes these 2 questions extremely easy to look at -- simply dividing the sum of conversions by the sum of sessions.
 
