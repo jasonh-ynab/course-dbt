@@ -18,10 +18,7 @@ final as (
       e.session_id
       , e.user_id
       , coalesce(e.product_id,oi.product_id) as product_id
-      , sum (case when e.event_type = 'page_view' then 1 else 0 end) as page_views
-      , sum (case when e.event_type = 'add_to_cart' then 1 else 0 end) as add_to_carts
-      , sum (case when e.event_type = 'checkout' then 1 else 0 end) as checkouts
-      , sum (case when e.event_type = 'package_shipped' then 1 else 0 end) as packages_shipped
+      {{event_types('stg_postgres__events','event_type') }}
     from events e
       left join order_items oi
       on e.order_id = oi.order_id
