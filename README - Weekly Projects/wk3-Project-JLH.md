@@ -30,6 +30,8 @@ Done.
 ## Part 5 | show it off...
 <img width="845" alt="image" src="https://github.com/jasonh-ynab/course-dbt/assets/105445369/e0081893-79db-427b-b18a-53ec1a7e4b6b">
 
+## Part 6 | snapshot
+Bamboo, Monstera, Philodendron, Pothos, String of pearls, & ZZ Plant.
 
 ## License
 GPL-3.0
