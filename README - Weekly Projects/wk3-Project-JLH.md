@@ -28,13 +28,7 @@ Done. And it looks like it ran in Snowflake "Activity" bar.
 Done. 
 
 ## Part 5 | show it off...
-
-#### Question: 
-
-#### Answer: 
-
-#### Tasks: 
-
+<img width="845" alt="image" src="https://github.com/jasonh-ynab/course-dbt/assets/105445369/e0081893-79db-427b-b18a-53ec1a7e4b6b">
 
 
 ## License
