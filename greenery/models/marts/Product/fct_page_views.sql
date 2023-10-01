@@ -20,7 +20,7 @@ final as (
         , se.page_views
         , se.add_to_carts
         , se.checkouts
-        , se.packages_shipped
+        , se.package_shippeds
         , st.first_session_event_at_utc
         , st.last_session_event_at_utc
         , st.session_length_minutes
