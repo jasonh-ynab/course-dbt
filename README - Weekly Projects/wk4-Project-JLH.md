@@ -3,8 +3,7 @@
 Here is a link to my Data Model folder structures: https://github.com/jasonh-ynab/course-dbt/tree/main/greenery/models/marts
 
 ## Part 1 | dbt Snapshots
-• I ran ```dbt snapshot```
-• Queried Snowflake, and see...
+• I ran ```dbt snapshot```, queried Snowflake, and unfortunately I had run "drop table" command in SQL the first few weeks & I have lost the historical data.
 
 ## Part 2 | Modeling challenge
 • I didn't need to create any additional models, because my ```fct_page_views``` has everything I need.
