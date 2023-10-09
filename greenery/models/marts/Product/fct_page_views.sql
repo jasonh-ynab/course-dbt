@@ -21,8 +21,8 @@ final as (
         , se.add_to_carts
         , se.checkouts
         , se.package_shippeds
-        , st.first_session_event_at_utc
-        , st.last_session_event_at_utc
+        , st.first_session_event_at_utc as session_start_time
+        , st.last_session_event_at_utc as session_end_time
         , st.session_length_minutes
     from sessions se
     left join session_times st 
